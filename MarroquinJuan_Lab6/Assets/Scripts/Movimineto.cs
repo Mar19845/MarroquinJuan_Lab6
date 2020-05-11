@@ -43,6 +43,7 @@ public class Movimineto : MonoBehaviour
         if(other.CompareTag("PowerUp"))
         {
             powerUp = true;
+            transform.localScale = new Vector2( 2.0f,2.0f);
             Destroy(other.gameObject);
         }
         // para matar al enemigo
