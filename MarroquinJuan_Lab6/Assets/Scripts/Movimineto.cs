@@ -8,6 +8,7 @@ public class Movimineto : MonoBehaviour
     public float velocidadCaminar = 5;
     public float velocidadSalto = 5;
     private bool powerUp;
+    public Sprite spriteImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,8 +44,10 @@ public class Movimineto : MonoBehaviour
         if(other.CompareTag("PowerUp"))
         {
             powerUp = true;
-            transform.localScale = new Vector2( 2.0f,2.0f);
             Destroy(other.gameObject);
+            //transform.localScale = new Vector2( 2.0f,2.0f);
+            GetComponent<SpriteRenderer>().sprite = spriteImage;
+
         }
         // para matar al enemigo
         {
